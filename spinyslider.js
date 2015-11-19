@@ -8,7 +8,7 @@ var slider,img = [],
   ];
 for (var i in images) {
   if (images.hasOwnProperty(i)) {
-    img.push("<span id=\"slide-"+i+"\"><img src=\"" + images[i] + "\" /></span>");
+    img.push("<span id=\"slide-"+(parseInt(i)+1)+"\"><img src=\"" + images[i] + "\" /></span>");
   }
 }
 
@@ -17,6 +17,6 @@ function init(slides){
  
 }
 
-console.log(img[2]);
+console.log(img[0]);
 
 init(img);

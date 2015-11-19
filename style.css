@@ -9,7 +9,7 @@ html {
   padding: 0px;
 }
 body {
-  padding-top: 480px;
+  padding-top: 360px;
 }
 
 /* Slider css  */
@@ -20,7 +20,6 @@ body {
   position: relative;
   display: block;
   height: 256px;
-  border-top: 10px solid #aaa;
 }
 .slider {
   position: absolute;
@@ -53,11 +52,11 @@ img:hover {
   filter: blur(2px);
 }
 .wide-slide {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
 }
 .side-slide:hover, .wide-slide:hover {
   -webkit-filter: blur(0px);
@@ -67,7 +66,7 @@ img:hover {
   filter: blur(0px);
 }
 .wide-slide {
-  width: 10%;
+  width: 15%;
 }
 .side-slide {
   margin-top: 10px;
