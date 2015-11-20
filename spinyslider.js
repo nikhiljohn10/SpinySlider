@@ -109,7 +109,6 @@ function rotate_class_right() {
         classes.push(slides[i].className);
     }
     for (var i = len-1; i >= 0; i--) {
-        console.log(i);
         $(slides[i]).removeClass(slides[i].className);
         if (i > 0) {
             $(slides[i]).addClass(classes[parseInt(i) - 1]);
