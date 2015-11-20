@@ -66,10 +66,12 @@ $(document).ready(function() {
                     console.log("State 4");
                     // move all elements left once
                     rotate_class_right()
+                    move_left();
                     break;
                 case 5:
                     console.log("State 5");
                     // move all elements left twice
+                    move_wide_left();
                     rotate_class_right()
                     rotate_class_right()
                     break;
@@ -82,7 +84,6 @@ $(document).ready(function() {
 });
 
 function rotate_class_left() {
-    var slider = $(".slider");
     var slides = slider.children();
     var classes = [];
     var len = slides.length;
@@ -101,14 +102,13 @@ function rotate_class_left() {
 }
 
 function rotate_class_right() {
-    var slider = $(".slider");
     var slides = slider.children();
     var classes = [];
     var len = slides.length;
     for (var i = 0; i < len; i++) {
         classes.push(slides[i].className);
     }
-    for (var i = len-1; i >= 0; i--) {
+    for (var i = len - 1; i >= 0; i--) {
         $(slides[i]).removeClass(slides[i].className);
         if (i > 0) {
             $(slides[i]).addClass(classes[parseInt(i) - 1]);
@@ -117,6 +117,42 @@ function rotate_class_right() {
             break;
         }
     }
+}
+
+function move_left() {
+    var slides = slider.children();
+    slides.each(function(index) {
+        console.log("Index =", index);
+        if (index == 0) {
+            $(slides[index]).addClass('fallOut-left');
+            var clone = $(slides[index]).clone();
+            slider.append(clone);
+            $(clone).removeClass('fallOut-left');
+            $(clone).addClass('fallIn-right');
+            window.setTimeout(function() {
+                $(clone).removeClass('fallIn-right');
+                $(slides[index]).remove();
+            }, 500);
+        }
+    });
+}
+
+function move_wide_left() {
+    var slides = slider.children();
+    slides.each(function(index) {
+        console.log("Index =", index);
+        if (index == 0) {
+            $(slides[index]).addClass('fallOut-left');
+            var clone = $(slides[index]).clone();
+            slider.append(clone);
+            $(clone).removeClass('fallOut-left');
+            $(clone).addClass('fallIn-right');
+            window.setTimeout(function() {
+                $(clone).removeClass('fallIn-right');
+                $(slides[index]).remove();
+            }, 500);
+        }
+    });
 }
 
 

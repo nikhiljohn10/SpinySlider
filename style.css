@@ -71,7 +71,8 @@ header h1 {
     padding: 20px 0px;
     position: relative;
     display: block;
-    height: 256px;
+    height: 300px;
+    overflow: hidden;
 }
 
 .slider {
@@ -80,13 +81,10 @@ header h1 {
     width: 100%;
 }
 
-.slider span {
-}
-
 img {
     position: relative;
     width: 20%;
-    transition: all 0.2s;
+    transition: all 0.2s, transform 0.6s, width 0.5s, opacity 0.2s;
     cursor: pointer;
 }
 
@@ -133,4 +131,15 @@ img {
 
 .side-slide:hover {
     transform: scale(0.675, 0.675);
+}
+
+.fallOut-left{
+	 transform: translate(50px,-120px); 
+	width:1px;
+	opacity:0.1;
+}
+
+.fallIn-right{
+	transform: translate(50px,-10px) scale(0.2, 0.2);
+	opacity:0;
 }
