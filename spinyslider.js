@@ -28,7 +28,7 @@ function init() {
     slider = $(".slider");
     for (var i in images) {
         if (images.hasOwnProperty(i)) {
-            slider.append("<span data-slide=\"" + images[i].id + "\"><img class=\"" + slideClasses[i] + "\" src=\"" + images[i].url + "\" alt=\"" + images[i].id + "\" /></span>");
+            slider.append("<img class=\"" + slideClasses[i] + "\" src=\"" + images[i].url + "\" data-slide=\"" + images[i].id + "\" />");
         }
     }
     isLoaded = true;
@@ -37,7 +37,7 @@ function init() {
 $(document).ready(function() {
     if (isLoaded) {
         slider.on("click", "img", function(event) {
-            var slide = $(event.target).parent();
+            var slide = $(event.target);
             var sid = slide[0].dataset.slide;
         });
     }
