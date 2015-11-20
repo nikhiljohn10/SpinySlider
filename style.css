@@ -81,23 +81,15 @@ header h1 {
 }
 
 .slider span {
-    width: 20%;
-    position: relative;
-    display: inline-block;
-    float: left;
-    height: 100%;
 }
 
 img {
+    display: inline-block;
     position: relative;
-    display: block;
     margin: auto;
+    width: 20%;
     vertical-align: middle;
     transition: all 0.2s;
-}
-
-img:hover {
-    transform: scale(1.1, 1.1);
     cursor: pointer;
 }
 
@@ -127,14 +119,25 @@ img:hover {
 }
 
 .wide-slide {
-    width: 15%;
+    transform: scale(0.3, 0.3);
 }
 
 .side-slide {
-    margin-top: 10px;
-    width: 30%;
+    transform: scale(0.6, 0.6);
 }
 
 .main-slide {
-    width: 50%;
+    transform: scale(1, 1);
+}
+
+.wide-slide:hover {
+    transform: scale(0.35, 0.35);
+}
+
+.side-slide:hover {
+    transform: scale(0.675, 0.675);
+}
+
+.main-slide:hover {
+    transform: scale(1.1, 1.1);
 }
