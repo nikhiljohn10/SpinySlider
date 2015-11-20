@@ -37,10 +37,10 @@ function init() {
 $(document).ready(function() {
     if (isLoaded) {
         slider.on("click", "img", function(event) {
-                var slide = $(event.target).parent();
-                var sid = slide[0].dataset.slide);
+            var slide = $(event.target).parent();
+            var sid = slide[0].dataset.slide;
         });
-}
+    }
 });
 
 init();
