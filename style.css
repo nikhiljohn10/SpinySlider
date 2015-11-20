@@ -84,11 +84,8 @@ header h1 {
 }
 
 img {
-    display: inline-block;
     position: relative;
-    margin: auto;
     width: 20%;
-    vertical-align: middle;
     transition: all 0.2s;
     cursor: pointer;
 }
@@ -136,8 +133,4 @@ img {
 
 .side-slide:hover {
     transform: scale(0.675, 0.675);
-}
-
-.main-slide:hover {
-    transform: scale(1.1, 1.1);
 }
